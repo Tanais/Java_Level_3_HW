@@ -1,4 +1,4 @@
-package org.example;
+package ru.as.homeworks.hw1;
 
 //1. Написать метод, который меняет два элемента массива местами.(массив может быть любого ссылочного типа);
 //2. Написать метод, который преобразует массив в ArrayList;
@@ -37,19 +37,22 @@ public class HomeWorkOneApp
         T buffer = arr [firstElement];
         arr[firstElement] = arr [secondElement];
         arr[secondElement] = buffer;
-
     }
 
 //2. Написать метод, который преобразует массив в ArrayList;
 
     public static <E> ArrayList<E> arrayToArrayList (E[] arr){
-        ArrayList<E> list = new ArrayList<>();
+        ArrayList<E> arrayList = new ArrayList<>();
         for (int i = 0; i < arr.length; i++) {
-            list.add(i, arr[i]);
+            arrayList.add(i, arr[i]);
         }
-        return list;
+        return arrayList;
      }
 
+//3. Задача 3.
+
+    Apple apple = new Apple();
+    Box<Apple> appleBox = new Box<>();
 
 
 
