@@ -6,11 +6,13 @@ import java.util.List;
 
 public class Box<T extends Fruits> {
 
+    private List<T> list;
+
     public List<T> getList() {
         return list;
     }
 
-    private List<T> list;
+
 
     public Box(T... obj) {
         list = Arrays.asList(obj);
@@ -45,6 +47,7 @@ public class Box<T extends Fruits> {
         }
     }
 
+    // TODO: 10.02.2022 Переписать compare @over
     boolean compare(Box<? extends Fruits> box) {
         return this.getWeight() == box.getWeight();
     }

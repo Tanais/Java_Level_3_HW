@@ -21,13 +21,44 @@ public class HomeWorkOneApp
 
     public static void main(String[] args )
     {
-        String[] testArr = new String[] {"abc", "cba", "x", "y"};
-        System.out.println(Arrays.toString(testArr));
-        swapElements(testArr, 2,3);
-        System.out.println(Arrays.toString(testArr));
+//        String[] testArr = new String[] {"abc", "cba", "x", "y"};
+//        System.out.println(Arrays.toString(testArr));
+//        swapElements(testArr, 2,3);
+//        System.out.println(Arrays.toString(testArr));
+//
+//        ArrayList<String> list = arrayToArrayList(testArr);
+//        System.out.println("\n" + list.getClass());
 
-        ArrayList<String> list = arrayToArrayList(testArr);
-        System.out.println("\n" + list.getClass());
+        //3. Задача 3.
+
+        Apple apple = new Apple();
+        Box<Apple> appleBox = new Box<>();
+        Box<Orange> orangeBox = new Box<>();
+        Box<Orange> orangeBox2 = new Box<>();
+
+        appleBox.add(new Apple());
+        appleBox.add(new Apple());
+        appleBox.add(new Apple());
+
+        orangeBox.add(new Orange());
+        orangeBox.add(new Orange());
+        orangeBox.add(new Orange());
+
+        orangeBox2.add(new Orange());
+
+        orangeBox2.info();
+        orangeBox.moveAt(orangeBox2);
+        orangeBox2.info();
+
+        appleBox.compare(orangeBox);
+
+
+
+
+
+
+
+
     }
 
 //1. Написать метод,
@@ -49,10 +80,6 @@ public class HomeWorkOneApp
         return arrayList;
      }
 
-//3. Задача 3.
-
-    Apple apple = new Apple();
-    Box<Apple> appleBox = new Box<>();
 
 
 
