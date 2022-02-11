@@ -12,8 +12,6 @@ public class Box<T extends Fruits> {
         return list;
     }
 
-
-
     public Box(T... obj) {
         list = Arrays.asList(obj);
     }
@@ -27,15 +25,11 @@ public class Box<T extends Fruits> {
     }
 
     void moveAt(Box<T> box) {
-        box.getList().addAll(list);
-        list.clear();
-    }
-
-    void info() {
-        if (list.isEmpty()) {
-            System.out.println("Коробка пуста");
+        if (this.list.isEmpty()) {
+            System.out.println("Nothing to spill. The box is empty.");
         } else {
-            System.out.println("В коробке находятся " + list.get(0).toString() + " в количестве: " + list.size());
+            box.getList().addAll(list);
+            list.clear();
         }
     }
 
@@ -47,8 +41,12 @@ public class Box<T extends Fruits> {
         }
     }
 
-    // TODO: 10.02.2022 Переписать compare @over
-    boolean compare(Box<? extends Fruits> box) {
-        return this.getWeight() == box.getWeight();
+
+    void compare(Box<? extends Fruits> box) {
+      if (this.getWeight() == box.getWeight()){
+          System.out.println("The weight of the boxes is the same");
+      } else {
+          System.out.println("The weight of the boxes is not the same");
+      }
     }
 }
