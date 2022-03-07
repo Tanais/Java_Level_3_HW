@@ -10,15 +10,10 @@ public class MainClass {
 
     public static void main(String[] args) {
         System.out.println("ВАЖНОЕ ОБЪЯВЛЕНИЕ >>> Подготовка!!!");
-
         CyclicBarrier cb = new CyclicBarrier(CARS_COUNT + 1);
         CountDownLatch cdl = new CountDownLatch(CARS_COUNT);
-
         Race race = new Race(new Road(60), new Tunnel(), new Road(40));
         Car[] cars = new Car[CARS_COUNT];
-
-
-
         for (int i = 0; i < cars.length; i++) {
             cars[i] = new Car(race, 20 + (int) (Math.random() * 10), cb, cdl);
         }
